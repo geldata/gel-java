@@ -22,7 +22,7 @@ You can use a provided builder by calling the ``builder()`` method on
     var builder = GelConnection.builder();
     var connection = builder.build();
 
-The builder accepts several `parameters <https://docs.edgedb.com/database/reference/connection>`_
+The builder accepts several `parameters <https://docs.geldata.com/database/reference/connection>`_
 which are used to construct the final ``GelConnection``.
 
 If no parameters are provided, the default behavior is to search for the
@@ -35,7 +35,7 @@ The builder has the following methods:
 +=====================================+==========================+=========================================================================+
 | ``withInstance``                    | String                   | The name of the gel instance to connect to.                             |
 +-------------------------------------+--------------------------+-------------------------------------------------------------------------+
-| ``withDsn``                         | String                   | The DSN to connect to. See: `here <https://www.edgedb.com/docs/reference/dsn>`_ for more information. |
+| ``withDsn``                         | String                   | The DSN to connect to. See: `here <https://www.geldata.com/docs/reference/dsn>`_ for more information. |
 +-------------------------------------+--------------------------+-------------------------------------------------------------------------+
 | ``withCredentials``                 | String                   | A json representation of the connection arguments.                      |
 +-------------------------------------+--------------------------+-------------------------------------------------------------------------+

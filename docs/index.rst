@@ -22,7 +22,7 @@ Quickstart
 
 To get started, you will need to setup an Gel project and have an instance
 created. For more information regarding how to do this, we recommend going
-through the `Quickstart guide <https://www.edgedb.com/docs/intro/quickstart>`_.
+through the `Quickstart guide <https://www.geldata.com/docs/intro/quickstart>`_.
 
 Once you have an instance running, you can add the driver dependency to your
 project.

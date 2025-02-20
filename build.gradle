@@ -6,11 +6,11 @@ plugins {
 
 ext {
     project_version = '0.3.1-SNAPSHOT'
-    github_org = 'edgedb'
-    project_name = 'edgedb-java'
+    github_org = 'geldata'
+    project_name = 'gel-java'
     artifact_group = 'com.gel'
     project_description = 'Java binding for Gel'
-    project_url = "https://edgedb.com"
+    project_url = "https://geldata.com"
     project_jdk = '11'
     jdk = JavaVersion.current().majorVersion
     jdk_javadoc = "https://docs.oracle.com/javase/$jdk/docs/api/".toString()
