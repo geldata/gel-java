@@ -260,9 +260,9 @@ public final class ConfigUtils {
 
     public static final class ResolvedField<T> {
         private final @Nullable T value;
-        private final @Nullable ConfigurationException error;
+        private final @Nullable Exception error;
 
-        private ResolvedField(@Nullable T value, @Nullable ConfigurationException error) {
+        private ResolvedField(@Nullable T value, @Nullable Exception error) {
             this.value = value;
             this.error = error;
         }
@@ -273,12 +273,18 @@ public final class ConfigUtils {
         public static @NotNull <T>ResolvedField<T> invalid(@NotNull ConfigurationException error) {
             return new ResolvedField<T>(null, error);
         }
+        public static @NotNull <T>ResolvedField<T> invalid(@NotNull IOException error) {
+            return new ResolvedField<T>(null, error);
+        }
+        private static @NotNull <T>ResolvedField<T> invalid(@NotNull Exception error) {
+            return new ResolvedField<T>(null, error);
+        }
 
         public final @Nullable T getValue() {
             return value;
         }
 
-        public @Nullable ConfigurationException getError() {
+        public @Nullable Exception getError() {
             return error;
         }
 
@@ -302,7 +308,7 @@ public final class ConfigUtils {
 
     public static @Nullable <T> T checkAndGetFieldValue(
         @Nullable ResolvedField<T> field
-    ) throws ConfigurationException {
+    ) throws ConfigurationException, IOException {
         return checkAndGetFieldValue(field, null);
     }
 
@@ -314,7 +320,7 @@ public final class ConfigUtils {
     public static @Nullable <T> T checkAndGetFieldValue(
         @Nullable ResolvedField<T> field,
         @Nullable Checker<T> checker
-    ) throws ConfigurationException {
+    ) throws ConfigurationException, IOException {
         if (field == null) {
             return null;
         }
@@ -324,7 +330,15 @@ public final class ConfigUtils {
         }
 
         if (field.getError() != null) {
-            throw field.getError();
+            if (field.getError() instanceof ConfigurationException) {
+                throw (ConfigurationException)field.getError();
+            }
+            else if (field.getError() instanceof IOException) {
+                throw (IOException)field.getError();
+            }
+            else {
+                throw new ConfigurationException("Error: Unknown exception.");
+            }
         }
 
         return field.getValue();
@@ -367,7 +381,7 @@ public final class ConfigUtils {
 
     public static HashMap<String, String> checkAndGetServerSettings(
         HashMap<String, ResolvedField<String>> serverSettings
-    ) throws ConfigurationException {
+    ) throws ConfigurationException, IOException {
         HashMap<String, String> result = new HashMap<String, String>();
         for (Map.Entry<String, ResolvedField<String>> entry : serverSettings.entrySet())
         {
