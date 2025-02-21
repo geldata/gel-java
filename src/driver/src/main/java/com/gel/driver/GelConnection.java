@@ -579,7 +579,7 @@ public class GelConnection implements Cloneable {
                 + "\"CredentialsFile\" or \"Host\"/\"Port\"");
             // The primaryError has priority, so hold on to any other exception
             // until all primary options are processed.
-            @Nullable ConfigurationException deferredPrimaryError = null;
+            @Nullable Exception deferredPrimaryError = null;
 
             if (builder.instance != null) {
                 if (hasPrimaryOptions) {
@@ -633,8 +633,14 @@ public class GelConnection implements Cloneable {
                             credentialsText = "{}";
                         }
                     }
-                    else {
+                    else if (builder.credentialsFile.toString().equals("")) {
                         deferredPrimaryError = new ConfigurationException(String.format(
+                            "Invalid CredentialsFile: \"%s\", could not find file",
+                            builder.credentialsFile
+                        ));
+                    }
+                    else {
+                        deferredPrimaryError = new FileNotFoundException(String.format(
                             "Invalid CredentialsFile: \"%s\", could not find file",
                             builder.credentialsFile
                         ));
@@ -684,7 +690,15 @@ public class GelConnection implements Cloneable {
             }
 
             if (deferredPrimaryError != null) {
-                throw deferredPrimaryError;
+                if (deferredPrimaryError instanceof ConfigurationException) {
+                    throw (ConfigurationException)deferredPrimaryError;
+                }
+                else if (deferredPrimaryError instanceof IOException) {
+                    throw (IOException)deferredPrimaryError;
+                }
+                else {
+                    throw new ConfigurationException("Error: Unknown exception.");
+                }
             }
         }
 
@@ -705,8 +719,7 @@ public class GelConnection implements Cloneable {
                 + "\"GEL_CREDENTIALS_FILE\" or \"GEL_HOST\"/\"GEL_PORT\"");
             // The primaryError has priority, so hold on to any other exception
             // until all primary env vars are processed.
-            @Nullable ConfigurationException deferredPrimaryError = null;
-
+            @Nullable Exception deferredPrimaryError = null;
             GelEnvVar instanceEnvVar = SystemProvider.getGelEnvVariable(provider, INSTANCE_ENV_NAME);
             if (instanceEnvVar != null) {
                 if (hasPrimaryEnv) {
@@ -750,7 +763,7 @@ public class GelConnection implements Cloneable {
                 }
                 else
                 {
-                    deferredPrimaryError = new ConfigurationException(String.format(
+                    deferredPrimaryError = new FileNotFoundException(String.format(
                         "Invalid credential file from %s: \"%s\", could not find file",
                         credentialsFileEnvVar.name,
                         credentialsFileEnvVar.value
@@ -794,7 +807,15 @@ public class GelConnection implements Cloneable {
             }
 
             if (deferredPrimaryError != null) {
-                throw deferredPrimaryError;
+                if (deferredPrimaryError instanceof ConfigurationException) {
+                    throw (ConfigurationException)deferredPrimaryError;
+                }
+                else if (deferredPrimaryError instanceof IOException) {
+                    throw (IOException)deferredPrimaryError;
+                }
+                else {
+                    throw new ConfigurationException("Error: Unknown exception.");
+                }
             }
         }
 
@@ -985,7 +1006,7 @@ public class GelConnection implements Cloneable {
                 );
             }
             else {
-                throw new ConfigurationException(String.format(
+                throw new FileNotFoundException(String.format(
                     "Invalid TLSCertificateAuthorityFile: \"%s\", could not find file",
                     builder.tlsCertificateAuthorityFile
                 ));
@@ -1030,7 +1051,7 @@ public class GelConnection implements Cloneable {
     private static GelConnection _fromResolvedFields(
         @NotNull ConfigUtils.ResolvedFields resolvedFields,
         @NotNull SystemProvider platform
-    ) throws ConfigurationException {
+    ) throws ConfigurationException, IOException {
         GelConnection result = new GelConnection();
 
         result.hostname = ConfigUtils.checkAndGetFieldValue(
@@ -1334,7 +1355,7 @@ public class GelConnection implements Cloneable {
                 }
                 else {
                     value = ResolvedField.invalid(
-                        new ConfigurationException(String.format(
+                        new FileNotFoundException(String.format(
                             "Invalid DSN query parameter: \"%s\" could not find file \"%s\"",
                             oldKey,
                             fileName

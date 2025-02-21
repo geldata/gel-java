@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -371,8 +372,10 @@ public class SharedClientTests {
             errorMatch.type,
             actual.getClass(),
             String.format(
-                "%s: %s",
+                "%s: Wrong exception type \"%s\", expected \"%s\"\n%s",
                 testName,
+                actual.getClass().getName(),
+                errorMatch.type.getTypeName(),
                 prettyError(actual)
             )
         );
@@ -399,7 +402,7 @@ public class SharedClientTests {
         entry(
             "credentials_file_not_found",
             new ErrorMatch(
-                ConfigurationException.class,
+                FileNotFoundException.class,
                 Pattern.compile("cannot read credentials")
             )
         ),
@@ -515,7 +518,7 @@ public class SharedClientTests {
         entry(
             "file_not_found",
             new ErrorMatch(
-                ConfigurationException.class,
+                FileNotFoundException.class,
                 Pattern.compile("could not find file")
             )
         ),
