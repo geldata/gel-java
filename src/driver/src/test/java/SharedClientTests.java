@@ -70,9 +70,6 @@ public class SharedClientTests {
         InputStream testCaseStream = ClassLoader.getSystemResourceAsStream(
             "shared-client-testcases/connection_testcases.json"
         );
-        if (testCaseStream == null) {
-            return;
-        }
 
         List<TestCase> testCases = TestCase.mapper.readValue(testCaseStream, new TypeReference<List<TestCase>>(){});
 
