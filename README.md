@@ -20,7 +20,7 @@ The Java binding is distrubuted via maven central:
 
 #### Gradle
 ```groovy
-implementation 'com.gel:driver:0.3.0'
+implementation 'com.gel:driver:0.4.0'
 ```
 
 #### Maven
@@ -28,7 +28,7 @@ implementation 'com.gel:driver:0.3.0'
 <dependency>
   <groupId>com.gel</groupId>
   <artifactId>driver</artifactId>
-  <version>0.3.0</version>
+  <version>0.4.0</version>
 </dependency>
 ```
 
@@ -36,7 +36,7 @@ implementation 'com.gel:driver:0.3.0'
 
 ```scala
 libraryDependencies ++= Seq(
-  "com.gel" % "driver" % "0.3.0"
+  "com.gel" % "driver" % "0.4.0"
 )
 ```
 
