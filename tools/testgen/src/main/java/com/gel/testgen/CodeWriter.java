@@ -1,4 +1,4 @@
-package com.gel.testgen;
+package com.geldata.testgen;
 
 import java.io.Closeable;
 import java.io.IOException;

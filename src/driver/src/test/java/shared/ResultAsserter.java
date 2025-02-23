@@ -1,11 +1,13 @@
 package shared;
 
-import com.gel.driver.datatypes.Json;
-import com.gel.driver.datatypes.Range;
-import com.gel.driver.datatypes.RelativeDuration;
-import com.gel.driver.datatypes.Tuple;
 import org.assertj.core.util.Lists;
 import org.opentest4j.AssertionFailedError;
+
+import com.geldata.driver.datatypes.Json;
+import com.geldata.driver.datatypes.Range;
+import com.geldata.driver.datatypes.RelativeDuration;
+import com.geldata.driver.datatypes.Tuple;
+
 import shared.models.ResultNode;
 
 import java.math.BigDecimal;

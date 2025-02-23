@@ -1,16 +1,18 @@
 package shared;
 
-import com.gel.driver.annotations.GelLinkType;
-import com.gel.driver.annotations.GelType;
-import com.gel.driver.datatypes.Json;
-import com.gel.driver.datatypes.Range;
-import com.gel.driver.datatypes.RelativeDuration;
-import com.gel.driver.datatypes.Tuple;
-import com.gel.driver.util.StringsUtil;
 import org.burningwave.core.assembler.ComponentContainer;
 import org.burningwave.core.classes.*;
 import org.jetbrains.annotations.Nullable;
 import org.opentest4j.AssertionFailedError;
+
+import com.geldata.driver.annotations.GelLinkType;
+import com.geldata.driver.annotations.GelType;
+import com.geldata.driver.datatypes.Json;
+import com.geldata.driver.datatypes.Range;
+import com.geldata.driver.datatypes.RelativeDuration;
+import com.geldata.driver.datatypes.Tuple;
+import com.geldata.driver.util.StringsUtil;
+
 import shared.models.CollectionResultNode;
 import shared.models.ResultNode;
 import shared.models.ResultNodeImpl;

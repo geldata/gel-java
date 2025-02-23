@@ -1,6 +1,6 @@
-package com.gel.examples
+package com.geldata.examples
 
-import com.gel.driver.GelClientPool
+import com.geldata.driver.GelClientPool
 import kotlinx.coroutines.future.await
 import org.slf4j.LoggerFactory
 

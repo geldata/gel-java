@@ -1,5 +1,5 @@
-package com.gel.examples
-import com.gel.driver.{GelClientPool, Transaction}
+package com.geldata.examples
+import com.geldata.driver.{GelClientPool, Transaction}
 import org.slf4j.LoggerFactory
 import scala.jdk.FutureConverters.*
 

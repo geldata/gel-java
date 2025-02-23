@@ -1,7 +1,7 @@
-package com.gel.examples
+package com.geldata.examples
 
-import com.gel.driver.namingstrategies.NamingStrategy
-import com.gel.driver.{GelClientPool, GelClientConfig, Transaction}
+import com.geldata.driver.namingstrategies.NamingStrategy
+import com.geldata.driver.{GelClientPool, GelClientConfig, Transaction}
 import org.slf4j.{Logger, LoggerFactory}
 
 import scala.concurrent.duration.Duration

@@ -1,6 +1,5 @@
 package shared.json;
 
-import com.gel.driver.datatypes.Range;
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
@@ -11,6 +10,8 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
+import com.geldata.driver.datatypes.Range;
+
 import org.assertj.core.util.Streams;
 import shared.ResultTypeBuilder;
 import shared.models.CollectionResultNode;

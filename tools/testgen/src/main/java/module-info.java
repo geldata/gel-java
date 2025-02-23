@@ -1,7 +1,7 @@
-module com.gel.testgen {
+module com.geldata.testgen {
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.databind;
-    requires com.gel.driver;
+    requires com.geldata.driver;
 
-    exports com.gel.testgen to com.fasterxml.jackson.databind;
+    exports com.geldata.testgen to com.fasterxml.jackson.databind;
 }

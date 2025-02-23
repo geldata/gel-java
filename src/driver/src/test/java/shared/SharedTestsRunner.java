@@ -1,21 +1,22 @@
 package shared;
 
-import com.gel.driver.GelClientPool;
-import com.gel.driver.GelClientConfig;
-import com.gel.driver.binary.builders.ObjectBuilder;
-import com.gel.driver.binary.codecs.Codec;
-import com.gel.driver.binary.protocol.QueryParameters;
-import com.gel.driver.binary.protocol.common.Cardinality;
-import com.gel.driver.binary.protocol.common.IOFormat;
-import com.gel.driver.clients.BaseGelClient;
-import com.gel.driver.clients.GelBinaryClient;
-import com.gel.driver.datatypes.RelativeDuration;
-import com.gel.driver.exceptions.GelException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.geldata.driver.GelClientConfig;
+import com.geldata.driver.GelClientPool;
+import com.geldata.driver.binary.builders.ObjectBuilder;
+import com.geldata.driver.binary.codecs.Codec;
+import com.geldata.driver.binary.protocol.QueryParameters;
+import com.geldata.driver.binary.protocol.common.Cardinality;
+import com.geldata.driver.binary.protocol.common.IOFormat;
+import com.geldata.driver.clients.BaseGelClient;
+import com.geldata.driver.clients.GelBinaryClient;
+import com.geldata.driver.datatypes.RelativeDuration;
+import com.geldata.driver.exceptions.GelException;
+
 import io.netty.buffer.ByteBuf;
 import shared.json.CDurationDeserializer;
 import shared.json.CPeriodDeserializer;

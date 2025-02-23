@@ -1,7 +1,5 @@
 package shared.json;
 
-import com.gel.driver.state.Config;
-import com.gel.driver.state.Session;
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.TreeNode;
@@ -12,6 +10,9 @@ import com.fasterxml.jackson.databind.node.BooleanNode;
 import com.fasterxml.jackson.databind.node.IntNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
+import com.geldata.driver.state.Config;
+import com.geldata.driver.state.Session;
+
 import org.assertj.core.util.Streams;
 import shared.ResultTypeBuilder;
 import shared.models.ResultNode;

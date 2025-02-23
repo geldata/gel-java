@@ -20,13 +20,13 @@ The Java binding is distrubuted via maven central:
 
 #### Gradle
 ```groovy
-implementation 'com.gel:driver:0.4.0'
+implementation 'com.geldata:driver:0.4.0'
 ```
 
 #### Maven
 ```xml
 <dependency>
-  <groupId>com.gel</groupId>
+  <groupId>com.geldata</groupId>
   <artifactId>driver</artifactId>
   <version>0.4.0</version>
 </dependency>
@@ -36,7 +36,7 @@ implementation 'com.gel:driver:0.4.0'
 
 ```scala
 libraryDependencies ++= Seq(
-  "com.gel" % "driver" % "0.4.0"
+  "com.geldata" % "driver" % "0.4.0"
 )
 ```
 
@@ -45,7 +45,7 @@ libraryDependencies ++= Seq(
 The `GelClientPool` class contains all the methods necessary to interact with the Gel database.
 
 ```java
-import com.gel.driver.GelClientPool;
+import com.geldata.driver.GelClientPool;
 
 void main() {
     var clientPool = new GelClientPool();
@@ -59,7 +59,7 @@ The `GelClientPool` uses `CompletionStage` for asynchronous operations, allowing
 to integrate it with your favorite asynchronous frameworks
 
 ```java
-import com.gel.driver.GelClientPool;
+import com.geldata.driver.GelClientPool;
 import reactor.core.publisher.Mono;
 
 void main() {
@@ -75,7 +75,7 @@ This also means it plays nicely with other JVM language that support asynchronou
 
 ```kotlin
 
-import com.gel.driver.GelClientPool
+import com.geldata.driver.GelClientPool
 import kotlinx.coroutines.future.await
 import kotlinx.coroutines.runBlocking
 
@@ -92,7 +92,7 @@ fun main() {
 
 ```scala
 
-import com.gel.driver.GelClientPool
+import com.geldata.driver.GelClientPool
 import scala.jdk.FutureConverters.*
 
 object Main extends App {

@@ -33,14 +33,14 @@ project.
         :caption: Maven
 
         <dependency>
-            <groupId>com.gel</groupId>
+            <groupId>com.geldata</groupId>
             <artifactId>driver</artifactId>
         </dependency>
 
     .. code-tab:: groovy
         :caption: Gradle
 
-        implementation 'com.gel:driver'
+        implementation 'com.geldata:driver'
 
 Once you have the dependency added, you can start using the client. The
 following is a simple example of how to connect to an Gel instance and
@@ -51,7 +51,7 @@ execute a query:
     .. code-tab:: java
         :caption: Futures
 
-        import com.gel.driver.GelClientPool;
+        import com.geldata.driver.GelClientPool;
         import java.util.concurrent.CompletableFuture;
 
         public class Main {
@@ -67,7 +67,7 @@ execute a query:
     .. code-tab:: java
         :caption: Reactor
 
-        import com.gel.driver.GelClientPool;
+        import com.geldata.driver.GelClientPool;
         import reactor.core.publisher.Mono;
 
         public class Main {

@@ -29,13 +29,13 @@ jar {
     manifest {
         attributes 'Implementation-Title': archivesBaseName,
                 'Implementation-Version': archiveVersion,
-                'Automatic-Module-Name': 'com.gel.driver'
+                'Automatic-Module-Name': 'com.geldata.driver'
     }
 }
 
 def deleteOldJar = tasks.register('deleteOldJarInBin') {
     var path = Paths.get(project.rootDir.toString(), 'examples', 'scala-examples', 'lib')
-    var paths = path.toFile().listFiles((FileFilter) { File f -> f.name.startsWith('com.gel.driver') })
+    var paths = path.toFile().listFiles((FileFilter) { File f -> f.name.startsWith('com.geldata.driver') })
     delete files(paths)
 }
 

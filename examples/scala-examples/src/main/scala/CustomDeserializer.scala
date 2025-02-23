@@ -1,6 +1,6 @@
-package com.gel.examples
-import com.gel.driver.GelClientPool
-import com.gel.driver.annotations.{GelDeserializer, GelName, GelType}
+package com.geldata.examples
+import com.geldata.driver.GelClientPool
+import com.geldata.driver.annotations.{GelDeserializer, GelName, GelType}
 import org.slf4j.LoggerFactory
 
 import scala.concurrent.{ExecutionContext, Future}

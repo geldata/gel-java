@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com.gel.testgen'
+group 'com.geldata.testgen'
 version '1.0-SNAPSHOT'
 
 repositories {

@@ -1,6 +1,6 @@
-package com.gel.examples
-import com.gel.driver.GelClientPool
-import com.gel.driver.annotations.{GelLinkType, GelType}
+package com.geldata.examples
+import com.geldata.driver.GelClientPool
+import com.geldata.driver.annotations.{GelLinkType, GelType}
 import org.slf4j.LoggerFactory
 
 import java.util

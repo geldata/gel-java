@@ -1,6 +1,6 @@
-package com.gel.examples
+package com.geldata.examples
 
-import com.gel.driver.GelClientPool
+import com.geldata.driver.GelClientPool
 
 interface Example {
     suspend fun runAsync(clientPool: GelClientPool)

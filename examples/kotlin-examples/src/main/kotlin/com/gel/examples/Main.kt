@@ -1,9 +1,9 @@
-package com.gel.examples
+package com.geldata.examples
 
-import com.gel.driver.GelClientPool
-import com.gel.driver.GelClientConfig
-import com.gel.driver.GelConnection
-import com.gel.driver.namingstrategies.NamingStrategy
+import com.geldata.driver.GelClientPool
+import com.geldata.driver.GelClientConfig
+import com.geldata.driver.GelConnection
+import com.geldata.driver.namingstrategies.NamingStrategy
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
 import kotlin.system.exitProcess

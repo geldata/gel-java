@@ -1,6 +1,7 @@
-import com.gel.driver.exceptions.ScramException;
-import com.gel.driver.util.Scram;
 import org.junit.jupiter.api.Test;
+
+import com.geldata.driver.exceptions.ScramException;
+import com.geldata.driver.util.Scram;
 
 import java.util.Base64;
 

@@ -1,8 +1,9 @@
-package com.gel.examples;
+package com.geldata.examples;
 
-import com.gel.driver.GelClientPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.geldata.driver.GelClientPool;
 
 import java.time.Duration;
 import java.util.HashMap;

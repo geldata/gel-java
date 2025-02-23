@@ -1,10 +1,10 @@
-module com.gel.driver {
-    exports com.gel.driver;
-    exports com.gel.driver.datatypes;
-    exports com.gel.driver.exceptions;
-    exports com.gel.driver.namingstrategies;
-    exports com.gel.driver.annotations;
-    exports com.gel.driver.state;
+module com.geldata.driver {
+    exports com.geldata.driver;
+    exports com.geldata.driver.datatypes;
+    exports com.geldata.driver.exceptions;
+    exports com.geldata.driver.namingstrategies;
+    exports com.geldata.driver.annotations;
+    exports com.geldata.driver.state;
 
     requires org.jetbrains.annotations;
     requires com.fasterxml.jackson.core;
@@ -20,5 +20,5 @@ module com.gel.driver {
     requires org.reflections;
     requires java.net.http;
 
-    opens com.gel.driver;
+    opens com.geldata.driver;
 }

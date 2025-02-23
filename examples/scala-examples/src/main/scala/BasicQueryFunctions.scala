@@ -1,5 +1,5 @@
-package com.gel.examples
-import com.gel.driver.GelClientPool
+package com.geldata.examples
+import com.geldata.driver.GelClientPool
 import org.slf4j.LoggerFactory
 
 import scala.concurrent.{ExecutionContext, Future}

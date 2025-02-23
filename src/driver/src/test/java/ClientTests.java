@@ -1,6 +1,7 @@
-import com.gel.driver.GelClientPool;
-import com.gel.driver.exceptions.GelException;
 import org.junit.jupiter.api.Test;
+
+import com.geldata.driver.GelClientPool;
+import com.geldata.driver.exceptions.GelException;
 
 import java.io.IOException;
 

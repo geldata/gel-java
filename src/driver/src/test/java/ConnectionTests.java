@@ -1,12 +1,3 @@
-import com.gel.driver.GelConnection;
-import com.gel.driver.TLSSecurityMode;
-import com.gel.driver.GelConnection.WaitTime;
-import com.gel.driver.abstractions.SystemProvider;
-import com.gel.driver.internal.BaseDefaultSystemProvider;
-import com.gel.driver.util.ConfigUtils;
-import com.gel.driver.util.ConfigUtils.ResolvedField;
-import com.gel.driver.exceptions.ConfigurationException;
-
 import org.assertj.core.api.Assert;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -17,6 +8,15 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.ValueSource;
+
+import com.geldata.driver.GelConnection;
+import com.geldata.driver.TLSSecurityMode;
+import com.geldata.driver.GelConnection.WaitTime;
+import com.geldata.driver.abstractions.SystemProvider;
+import com.geldata.driver.exceptions.ConfigurationException;
+import com.geldata.driver.internal.BaseDefaultSystemProvider;
+import com.geldata.driver.util.ConfigUtils;
+import com.geldata.driver.util.ConfigUtils.ResolvedField;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

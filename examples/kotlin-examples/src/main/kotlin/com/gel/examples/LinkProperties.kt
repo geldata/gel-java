@@ -1,8 +1,8 @@
-package com.gel.examples
+package com.geldata.examples
 
-import com.gel.driver.GelClientPool
-import com.gel.driver.annotations.GelLinkType
-import com.gel.driver.annotations.GelType
+import com.geldata.driver.GelClientPool
+import com.geldata.driver.annotations.GelLinkType
+import com.geldata.driver.annotations.GelType
 import kotlinx.coroutines.future.await
 import org.slf4j.LoggerFactory
 

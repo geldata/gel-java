@@ -1,8 +1,8 @@
-package com.gel.testgen;
+package com.geldata.testgen;
 
-import com.gel.driver.namingstrategies.NamingStrategy;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.geldata.driver.namingstrategies.NamingStrategy;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

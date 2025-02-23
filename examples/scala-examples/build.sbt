@@ -3,7 +3,7 @@ ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / scalaVersion := "3.1.3"
 
 libraryDependencies ++= Seq(
-  "com.gel" % "driver" % "0.4.0" from "file:///" + System.getProperty("user.dir") + "/lib/com.gel.driver-0.4.0.jar",
+  "com.geldata" % "driver" % "0.4.0" from "file:///" + System.getProperty("user.dir") + "/lib/com.geldata.driver-0.4.0.jar",
   "ch.qos.logback" % "logback-classic" % "1.4.7",
   "ch.qos.logback" % "logback-core" % "1.4.7",
   "com.fasterxml.jackson.core" % "jackson-databind" % "2.15.1",
@@ -15,5 +15,5 @@ libraryDependencies ++= Seq(
 lazy val root = (project in file("."))
   .settings(
     name := "scala-examples",
-    idePackagePrefix := Some("com.gel.examples")
+    idePackagePrefix := Some("com.geldata.examples")
   )

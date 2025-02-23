@@ -1,9 +1,10 @@
-package com.gel.examples;
+package com.geldata.examples;
 
-import com.gel.driver.GelClientPool;
-import com.gel.driver.annotations.GelType;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.geldata.driver.GelClientPool;
+import com.geldata.driver.annotations.GelType;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

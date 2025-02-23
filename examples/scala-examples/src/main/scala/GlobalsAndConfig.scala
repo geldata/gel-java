@@ -1,8 +1,8 @@
-package com.gel.examples
+package com.geldata.examples
 
-import com.gel.driver.GelClientPool
+import com.geldata.driver.GelClientPool
 import io.netty.util.internal.shaded.org.jctools.queues.MessagePassingQueue.Consumer
-import com.gel.driver.state.Config
+import com.geldata.driver.state.Config
 import org.slf4j.LoggerFactory
 
 import java.time.Duration

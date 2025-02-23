@@ -1,10 +1,11 @@
-package com.gel.examples;
+package com.geldata.examples;
 
-import com.gel.driver.*;
-import com.gel.driver.exceptions.GelException;
-import com.gel.driver.namingstrategies.NamingStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.geldata.driver.*;
+import com.geldata.driver.exceptions.GelException;
+import com.geldata.driver.namingstrategies.NamingStrategy;
 
 import java.io.IOException;
 import java.util.ArrayList;

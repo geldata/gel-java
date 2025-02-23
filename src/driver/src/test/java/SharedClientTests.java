@@ -34,18 +34,6 @@ import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Convert;
 
-import com.gel.driver.GelConnection;
-import com.gel.driver.GelConnection.WaitTime;
-import com.gel.driver.TLSSecurityMode;
-import com.gel.driver.abstractions.OSType;
-import com.gel.driver.abstractions.SystemProvider;
-import com.gel.driver.exceptions.ConfigurationException;
-import com.gel.driver.internal.BaseDefaultSystemProvider;
-import com.gel.driver.internal.DefaultSystemProvider;
-import com.gel.driver.util.ConfigUtils;
-import com.gel.driver.util.HexUtils;
-import com.gel.driver.util.ConfigUtils.ResolvedField;
-import com.gel.driver.util.JsonUtils.AsStringDeserializer;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
@@ -59,6 +47,18 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.databind.node.IntNode;
+import com.geldata.driver.GelConnection;
+import com.geldata.driver.TLSSecurityMode;
+import com.geldata.driver.GelConnection.WaitTime;
+import com.geldata.driver.abstractions.OSType;
+import com.geldata.driver.abstractions.SystemProvider;
+import com.geldata.driver.exceptions.ConfigurationException;
+import com.geldata.driver.internal.BaseDefaultSystemProvider;
+import com.geldata.driver.internal.DefaultSystemProvider;
+import com.geldata.driver.util.ConfigUtils;
+import com.geldata.driver.util.HexUtils;
+import com.geldata.driver.util.ConfigUtils.ResolvedField;
+import com.geldata.driver.util.JsonUtils.AsStringDeserializer;
 
 import net.bytebuddy.implementation.bytecode.Throw;
 

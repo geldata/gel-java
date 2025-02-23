@@ -1,10 +1,11 @@
 package shared.models;
 
-import com.gel.driver.Capabilities;
-import com.gel.driver.binary.PacketSerializer;
-import com.gel.driver.binary.protocol.common.Cardinality;
-import com.gel.driver.state.Session;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.geldata.driver.Capabilities;
+import com.geldata.driver.binary.PacketSerializer;
+import com.geldata.driver.binary.protocol.common.Cardinality;
+import com.geldata.driver.state.Session;
+
 import shared.json.SessionDeserializer;
 
 import java.util.Arrays;
