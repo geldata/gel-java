@@ -9,7 +9,7 @@
   <a href="https://github.com/geldata/gel/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-Apache%202.0-blue" />
   </a>
-  <a href="https://discord.gg/edgedb">
+  <a href="https://discord.gg/umUueND6ag">
     <img src="https://discord.com/api/guilds/841451783728529451/widget.png" alt="Discord">
   </a>
 </div>
